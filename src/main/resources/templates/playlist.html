@@ -10,29 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/playlist.css}"/>
+    <link rel="stylesheet" th:href="@{/css/leftnav.css}"/>
 </head>
 <body>
- <nav class="navbar navbar-inverse" style="margin-left: 20px; margin-right: 20px">
-     <div class="container-fluid">
-         <div class="navbar-header">
-             <a class="navbar-brand" style="font-family: 'sans-serif'" href="#">Youtube Videos</a>
-         </div>
-         <div class="nav navbar-nav">
-             <a class="navbar-brand" style="font-family: 'sans-serif'" th:href="@{/playlists}">Home</a>
-         </div>
-         <ul class="nav navbar-nav">
-             <li class="dropdown" style="font-family: 'sans-serif'">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Playlists<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                     <li><a th:href="@{/playlist/PLe8D_ZQyQeDV-lEoCmTz6HO9GHe_T7kTN}">Domaći Pop - stare stvari</a></li>
-                     <li><a th:href="@{/playlist/PLe8D_ZQyQeDVoSSNX8jop9FCOuA-kGsHm}">Domaći Rok - stare stvari</a></li>
-                     <li><a th:href="@{/playlist/PLe8D_ZQyQeDV8GK6Ck3ZM4kFXDkR_j882}">Strani Pop - stare stvari</a></li>
-                     <li><a th:href="@{/playlist/PLe8D_ZQyQeDWhiwxi3p8CCy178sCpUsGT}">Strani Rok - stare stvari</a></li>
-                 </ul>
-             </li>
-         </ul>
-     </div>
- </nav>
 <div class="container">
     <h2 style="margin-bottom: 40px; font-family: 'sans-serif'"><span th:text="${title}"></span></h2>
     <div class="row" style="margin-left: 6px">
@@ -48,6 +30,13 @@
             </div>
         </div>
     </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a th:href="@{/playlists}" id="h">Home</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDV-lEoCmTz6HO9GHe_T7kTN}" id="dp">Domaći Pop - stare stvari</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDVoSSNX8jop9FCOuA-kGsHm}" id="dr">Domaći Rok - stare stvari</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDV8GK6Ck3ZM4kFXDkR_j882}" id="sp">Strani Pop - stare stvari</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDWhiwxi3p8CCy178sCpUsGT}" id="sr">Strani Rok - stare stvari</a>
 </div>
 </body>
 </html>

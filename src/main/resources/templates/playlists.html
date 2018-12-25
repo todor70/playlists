@@ -18,34 +18,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" th:href="@{/css/playlist.css}"/>
+    <link rel="stylesheet" th:href="@{/css/leftnav.css}"/>
     <script th:src="@{/js/playlist.js}"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse" style="margin-left: 20px; margin-right: 20px">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" style="font-family: 'sans-serif'" href="#">Youtube Videos</a>
-        </div>
-        <div class="nav navbar-nav">
-            <a class="navbar-brand" style="font-family: 'sans-serif'" href="#">Home</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="dropdown" style="font-family: 'sans-serif'">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">Playlists<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a th:href="@{/playlist/PLe8D_ZQyQeDV-lEoCmTz6HO9GHe_T7kTN}">Domaći Pop - stare stvari</a></li>
-                    <li><a th:href="@{/playlist/PLe8D_ZQyQeDVoSSNX8jop9FCOuA-kGsHm}">Domaći Rok - stare stvari</a></li>
-                    <li><a th:href="@{/playlist/PLe8D_ZQyQeDV8GK6Ck3ZM4kFXDkR_j882}">Strani Pop - stare stvari</a></li>
-                    <li><a th:href="@{/playlist/PLe8D_ZQyQeDWhiwxi3p8CCy178sCpUsGT}">Strani Rok - stare stvari</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
 <div class="demo">
     <div class="container">
-        <h3 class="h3" style="font-size: 21px; font-family: 'sans-serif'">Željko's Playlists </h3>
+        <h2 style="text-align: center; font-weight: bold; margin-top: 40px; margin-bottom: 50px; font-size: 25px; font-family: 'sans-serif'">YouTube Playlists </h2>
         <div class="row">
 
             <div class="col-md-12">
@@ -70,6 +49,13 @@
             </div>
         </div>
     </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a href="#" id="h">Home</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDV-lEoCmTz6HO9GHe_T7kTN}" id="dp">Domaći Pop - stare stvari</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDVoSSNX8jop9FCOuA-kGsHm}" id="dr">Domaći Rok - stare stvari</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDV8GK6Ck3ZM4kFXDkR_j882}" id="sp">Strani Pop - stare stvari</a>
+    <a th:href="@{/playlist/PLe8D_ZQyQeDWhiwxi3p8CCy178sCpUsGT}" id="sr">Strani Rok - stare stvari</a>
 </div>
 </body>
 </html>
