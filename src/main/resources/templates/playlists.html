@@ -15,30 +15,34 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" th:href="@{/css/playlist.css}"/>
     <link rel="stylesheet" th:href="@{/css/leftnav.css}"/>
     <script th:src="@{/js/playlist.js}"></script>
+
 </head>
 <body>
 <div class="demo">
     <div class="container">
-        <h2 style="text-align: center; font-weight: bold; margin-top: 40px; margin-bottom: 50px; font-size: 25px; font-family: 'sans-serif'">YouTube Playlists </h2>
+        <h2 style="text-align: center; font-weight: bold; margin-top: 40px; margin-bottom: 50px; font-size: 25px; font-family: 'sans-serif'">
+            YouTube Playlists </h2>
         <div class="row">
             <div class="col-md-12">
                 <div id="news-slider2" class="owl-carousel">
                     <div th:each="item : ${items}">
                         <div class="post-slide2">
                             <div class="post-img">
-                                <img th:src="${item.snippet.thumbnails.high.url}" style="width: 360px; height: 290px" alt="image">
+                                <img th:src="${item.snippet.thumbnails.high.url}" style="width: 360px; height: 290px"
+                                     alt="image">
                             </div>
                             <div class="post-content">
-                                <!--<h3 class="post-title"><a href="#">Latest News Post</a></h3>-->
                                 <h3 class="post-title" th:text="${item.snippet.title}"
                                     style="font-family: 'sans-serif'"></h3>
                                 <ul class="post-bar">
-                                    <li style="font-family: 'sans-serif'">Published at <h5 th:text="${item.snippet.publishedAt}"></h5></li>
+                                    <li style="font-family: 'sans-serif'">Published at <h5
+                                            th:text="${item.snippet.publishedAt}"></h5></li>
                                 </ul>
                                 <a th:href="@{/playlist/{id}(id=${item.id})}" class="read-more">videos</a>
                             </div>

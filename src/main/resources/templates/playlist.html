@@ -15,22 +15,40 @@
     <link rel="stylesheet" th:href="@{/css/leftnav.css}"/>
 
     <style>
-        .thumbnail{
-            box-shadow: 0 4px 2px rgba(43,59,93,0.30);
+        .thumbnail {
+            box-shadow: 0 4px 2px rgba(43, 59, 93, 0.30);
         }
     </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#searchVideo ").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
 </head>
 <body>
 <div class="container">
-    <h2 style="margin-bottom: 40px; font-family: 'sans-serif'"><span th:text="${title}"></span></h2>
+
+    <div style="margin-bottom: 35px; margin-left: 6px; margin-top: 10px; font-family: 'sans-serif'" class="row">
+        <div class="col-md-9"><h2 ><span th:text="${title}"></span></h2></div>
+        <div class="col-md-3"><input style="margin-top: 25px; width: 242px" class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" aria-label="Search"></div>
+    </div>
+
     <div class="row" style="margin-left: 6px">
         <div th:each="item : ${items}">
-            <div class="col-md-3">
+            <div id="searchVideo" class="col-md-3">
                 <div class="thumbnail" style="width: 242px; height: 275px">
                     <img th:src="${item.snippet.thumbnails.high.url}" style="width: 242px; height: 190px" alt="...">
                     <div style="margin: 5px; font-family: 'sans-serif'">
                         <b th:text="${item.snippet.title}"></b><br>
-                        <a th:href="@{/video/{id}(id=${item.snippet.resourceId.videoId})}" style="margin-top: 10px" class="btn btn-info btn-md active">Play Video</a>
+                        <a th:href="@{/video/{id}(id=${item.snippet.resourceId.videoId})}" style="margin-top: 10px"
+                           class="btn btn-info btn-md active">Play Video</a>
                     </div>
                 </div>
             </div>
