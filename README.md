@@ -7,5 +7,7 @@ Spring Boot RestTemplate with YouTube Data API and Thymeleaf
 
 ![](images/list.png)
 
+![](images/list2.png)
+
 ![](images/video.png)
 
