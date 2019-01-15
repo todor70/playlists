@@ -5,6 +5,7 @@
     <title>Playlist</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -35,7 +36,7 @@
 <body>
 <div class="container">
 
-    <div style="margin-bottom: 35px; margin-left: 6px; margin-top: 10px; font-family: 'sans-serif'" class="row">
+    <div style="margin-bottom: 35px; margin-left: 6px; margin-top: 10px; font-family: 'Merienda'" class="row">
         <div class="col-md-9"><h2 ><span th:text="${title}"></span></h2></div>
         <div class="col-md-3"><input style="margin-top: 25px; width: 242px" class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" aria-label="Search"></div>
     </div>
@@ -45,7 +46,7 @@
             <div id="searchVideo" class="col-md-3">
                 <div class="thumbnail" style="width: 242px; height: 275px">
                     <img th:src="${item.snippet.thumbnails.high.url}" style="width: 242px; height: 190px" alt="...">
-                    <div style="margin: 5px; font-family: 'sans-serif'">
+                    <div style="margin: 5px; font-family: 'Merienda'">
                         <b th:text="${item.snippet.title}"></b><br>
                         <a th:href="@{/video/{id}(id=${item.snippet.resourceId.videoId})}" style="margin-top: 10px"
                            class="btn btn-info btn-md active">Play Video</a>
@@ -55,7 +56,7 @@
         </div>
     </div>
 </div>
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav" style="font-family: Merienda">
     <a th:href="@{/playlists}" id="h">Home</a>
     <a th:href="@{/playlist/PLe8D_ZQyQeDV-lEoCmTz6HO9GHe_T7kTN}" id="dp">Domaći Pop - stare stvari</a>
     <a th:href="@{/playlist/PLe8D_ZQyQeDVoSSNX8jop9FCOuA-kGsHm}" id="dr">Domaći Rok - stare stvari</a>
